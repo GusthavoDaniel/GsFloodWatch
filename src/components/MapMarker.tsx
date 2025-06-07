@@ -12,9 +12,9 @@ interface MapMarkerProps {
 /**
  * Componente de marcador personalizado para o mapa
  * 
- * @param color Cor do marcador
- * @param type Tipo do marcador ('alert' ou 'sensor')
- * @param onPress Função de callback ao pressionar o marcador
+ * @param color 
+ * @param type 
+ * @param onPress 
  */
 const MapMarker: React.FC<MapMarkerProps> = ({ color, type, onPress }) => {
   return (

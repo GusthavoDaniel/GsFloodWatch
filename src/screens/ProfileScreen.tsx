@@ -6,7 +6,7 @@ import { RootTabParamList } from '../types/navigation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Header from '../components/Header';
 
-// Define os tipos
+
 type Props = BottomTabScreenProps<RootTabParamList, 'ProfileTab'> & {
   theme: any;
   setIsDarkMode: (value: boolean) => void;

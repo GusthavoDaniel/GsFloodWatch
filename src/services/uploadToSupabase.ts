@@ -1,6 +1,6 @@
 
-import { supabase } from './supabaseClient'; // Import the shared client
-import { decode } from 'base64-arraybuffer'; // Needed for base64 uploads if required, but blob is preferred
+import { supabase } from './supabaseClient'; 
+import { decode } from 'base64-arraybuffer'; 
 
 const BUCKET_NAME = 'alerts';
 
@@ -8,24 +8,24 @@ export async function uploadImageToSupabase(uri: string): Promise<string> {
   try {
     const fileName = `alert-${Date.now()}.jpg`;
 
-    // Fetch the image data as a blob
+    
     const res = await fetch(uri);
     if (!res.ok) {
       throw new Error(`Failed to fetch image URI: ${res.statusText}`);
     }
     const blob = await res.blob();
 
-    // Upload the blob to Supabase Storage using the SHARED, AUTHENTICATED client
+    
     const { data, error: uploadError } = await supabase.storage
       .from(BUCKET_NAME)
       .upload(fileName, blob, {
-        contentType: blob.type || 'image/jpeg', // Ensure content type is set
-        upsert: true, // Overwrite if file exists
+        contentType: blob.type || 'image/jpeg', 
+        upsert: true, 
       });
 
     if (uploadError) {
       console.error('Supabase upload error:', uploadError);
-      // Check if the error is specifically an RLS violation again
+      
       if (uploadError.message.includes('security policy')) {
           console.error('RLS Policy is still blocking the upload. Ensure the user is logged in and the policy is correct.');
       }
@@ -36,7 +36,7 @@ export async function uploadImageToSupabase(uri: string): Promise<string> {
         throw new Error('Upload para Supabase não retornou dados.');
     }
 
-    // Get the public URL for the uploaded file using the SHARED client
+    
     const { data: publicUrlData } = supabase.storage
       .from(BUCKET_NAME)
       .getPublicUrl(fileName);

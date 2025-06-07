@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { RootTabParamList } from '../types/navigation';
 import Header from '../components/Header';
-import { getSensors } from '../services/sensorsService';
+
 
 interface SensorStatusScreenProps extends BottomTabScreenProps<RootTabParamList, 'SensorStatusTab'> {
   theme: any; 

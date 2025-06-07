@@ -7,7 +7,7 @@ import MapLegend from '../components/MapLegend';
 import MapFilters from '../components/MapFilters';
 
 interface MapScreenProps extends BottomTabScreenProps<RootTabParamList, 'MapTab'> {
-  theme: any; // Adicionando a propriedade theme
+  theme: any; 
 }
 
 const MapScreen: React.FC<MapScreenProps> = ({ theme }) => {
@@ -28,7 +28,7 @@ const MapScreen: React.FC<MapScreenProps> = ({ theme }) => {
       {/* Apenas imagem do mapa */}
       <View style={styles(theme).mapContainer}>
         <Image
-          source={require('../assets/mapa-sp.png')} // <-- Caminho relativo correto
+          source={require('../assets/mapa-sp.png')} 
           style={styles(theme).staticMap}
           resizeMode="cover"
         />

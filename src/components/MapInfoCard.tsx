@@ -12,14 +12,14 @@ interface MapInfoCardProps {
 /**
  * Componente para exibir informações detalhadas de um alerta ou sensor selecionado no mapa
  * 
- * @param item O alerta ou sensor selecionado
- * @param onClose Função para fechar o card de informações
+ * @param item 
+ * @param onClose 
  */
 const MapInfoCard: React.FC<MapInfoCardProps> = ({ item, onClose }) => {
-  // Verifica se o item é um alerta ou um sensor
+
   const isAlert = 'level' in item;
   
-  // Função para formatar a data
+  
   const formatDate = (timestamp: number) => {
     return new Date(timestamp).toLocaleString('pt-BR', {
       day: '2-digit',
@@ -30,7 +30,7 @@ const MapInfoCard: React.FC<MapInfoCardProps> = ({ item, onClose }) => {
     });
   };
   
-  // Função para determinar a cor do nível de alerta
+  
   const getAlertColor = (level: Alert['level']) => {
     switch (level) {
       case 'Crítico': return theme.colors.error;
@@ -41,7 +41,7 @@ const MapInfoCard: React.FC<MapInfoCardProps> = ({ item, onClose }) => {
     }
   };
   
-  // Função para determinar a cor do status do sensor
+  
   const getSensorStatusColor = (status: Sensor['status']) => {
     switch (status) {
       case 'Online': return theme.colors.success;
@@ -61,7 +61,7 @@ const MapInfoCard: React.FC<MapInfoCardProps> = ({ item, onClose }) => {
       </TouchableOpacity>
       
       {isAlert ? (
-        // Renderiza informações de alerta
+        
         <>
           <Text style={styles.title}>Alerta: {(item as Alert).location}</Text>
           <View style={styles.row}>
@@ -85,7 +85,7 @@ const MapInfoCard: React.FC<MapInfoCardProps> = ({ item, onClose }) => {
           </View>
         </>
       ) : (
-        // Renderiza informações de sensor
+       
         <>
           <Text style={styles.title}>Sensor: {(item as Sensor).location}</Text>
           <View style={styles.row}>

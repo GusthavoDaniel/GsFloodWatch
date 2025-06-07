@@ -1,4 +1,4 @@
-// LoginScreenFinalDesign.tsx
+
 import React, { useState, useRef, useEffect } from 'react';
 import {
   View,
@@ -22,13 +22,13 @@ import {
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Feather } from '@expo/vector-icons';
-import LottieView from 'lottie-react-native'; // Keep for loading state
+import LottieView from 'lottie-react-native'; 
 import * as Haptics from 'expo-haptics';
 
-// Assuming these types exist
+
 import { RootStackParamList } from '../types/navigation';
 
-// Enable LayoutAnimation on Android
+
 if (
   Platform.OS === "android" &&
   UIManager.setLayoutAnimationEnabledExperimental
@@ -36,7 +36,7 @@ if (
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-// --- Define specific types based on React Native's TextStyle ---
+
 type FontWeight = TextStyle['fontWeight'];
 type TextTransform = TextStyle['textTransform'];
 
@@ -44,7 +44,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Login'> & {
   theme: any;
 };
 
-// --- Input Component (Simplified for Reference Image Style) ---
+
 interface FormInputProps extends React.ComponentProps<typeof TextInput> {
   label: string;
   error?: string | null;
@@ -92,7 +92,7 @@ const FormInput: React.FC<FormInputProps> = ({ label, error, theme, style, leftI
     </View>
   );
 };
-// --- End Simplified Input Component ---
+
 
 const LoginScreen: React.FC<Props> = ({ navigation, theme }) => {
   const [username, setUsername] = useState('');
@@ -100,9 +100,9 @@ const LoginScreen: React.FC<Props> = ({ navigation, theme }) => {
   const [loading, setLoading] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
 
-  const buttonScale = useRef(new Animated.Value(1)).current; // Keep animation for button press
+  const buttonScale = useRef(new Animated.Value(1)).current; 
 
-  // Basic validation (can be enhanced)
+ 
   const validateFields = () => {
     let isValid = true;
     if (!username.trim()) {
@@ -125,13 +125,13 @@ const LoginScreen: React.FC<Props> = ({ navigation, theme }) => {
     setTimeout(() => {
       setLoading(false);
       navigation.replace('MainTabs');
-    }, 1500); // Simulate API call
+    }, 1500); 
   };
 
-  // Button press animation handlers
+ 
   const onPressIn = () => {
     Animated.spring(buttonScale, {
-      toValue: 0.98, // Subtle scale down
+      toValue: 0.98,
       useNativeDriver: true,
     }).start();
   };
@@ -165,8 +165,8 @@ const LoginScreen: React.FC<Props> = ({ navigation, theme }) => {
         {/* Logo and Title Area */} 
         <View style={styles.headerContainer}>
           <Image
-            // IMPORTANT: Replace with your actual logo path
-            source={require('../../assets/flod.png')} // Usando a imagem disponível
+            
+            source={require('../../assets/flod.png')} 
             style={styles.logo}
             resizeMode="contain"
           />
@@ -202,7 +202,7 @@ const LoginScreen: React.FC<Props> = ({ navigation, theme }) => {
                 <Feather name={passwordVisible ? "eye-off" : "eye"} size={20} color={theme.colors.textSecondary} />
               </Pressable>
             }
-            containerStyle={{ marginBottom: theme.spacing.xl }} // More space before button
+            containerStyle={{ marginBottom: theme.spacing.xl }} 
           />
 
           <Animated.View style={[{ transform: [{ scale: buttonScale }] }]}>
@@ -210,7 +210,7 @@ const LoginScreen: React.FC<Props> = ({ navigation, theme }) => {
               style={[styles.button, loading && styles.buttonDisabled]}
               onPress={handleLogin}
               disabled={loading}
-              activeOpacity={0.85} // Slightly more visible press
+              activeOpacity={0.85} 
               onPressIn={onPressIn}
               onPressOut={onPressOut}
             >
@@ -230,7 +230,7 @@ const LoginScreen: React.FC<Props> = ({ navigation, theme }) => {
   );
 };
 
-// --- Styles Function (Aligned with Reference Image) ---
+
 const loginStyles = (theme: any) => StyleSheet.create({
   container: {
     flex: 1,
@@ -244,16 +244,16 @@ const loginStyles = (theme: any) => StyleSheet.create({
   },
   headerContainer: {
     alignItems: 'center',
-    marginBottom: theme.spacing.xl, // Space between header and card
+    marginBottom: theme.spacing.xl, 
     marginTop: theme.spacing.lg,
   },
   logo: {
-    width: 64, // Smaller logo as in reference
+    width: 64, 
     height: 64,
     marginBottom: theme.spacing.lg,
-    borderRadius: theme.borderRadius.md, // Rounded square logo bg
-    backgroundColor: theme.colors.primary, // Dark background for logo
-    // Ensure the image inside fits well
+    borderRadius: theme.borderRadius.md, 
+    backgroundColor: theme.colors.primary, 
+    
   },
   title: {
     ...theme.typography.h1,
@@ -270,32 +270,32 @@ const loginStyles = (theme: any) => StyleSheet.create({
     backgroundColor: theme.colors.surface,
     borderRadius: theme.borderRadius.lg,
     padding: theme.spacing.lg,
-    ...theme.elevation[1], // Apply subtle shadow
+    ...theme.elevation[1], 
   },
   inputOuterContainer: {
-    // Container for label and input field
+    
   },
   inputLabel: {
-    ...theme.typography.h3, // Use h3 for label style
-    fontSize: 14, // Explicit size from reference
+    ...theme.typography.h3, 
+    fontSize: 14, 
     fontWeight: '500' as FontWeight,
     color: theme.colors.textSecondary,
     marginBottom: theme.spacing.sm,
-    marginLeft: theme.spacing.xs, // Slight indent for label
+    marginLeft: theme.spacing.xs, 
   },
   inputContainer: {
       flexDirection: 'row',
       alignItems: 'center',
       backgroundColor: theme.colors.background,
       borderRadius: theme.borderRadius.md,
-      height: 52, // Input height
+      height: 52, 
       paddingHorizontal: theme.spacing.md,
       borderWidth: 1,
-      borderColor: 'transparent', // Default no border
+      borderColor: 'transparent', 
   },
   inputContainerFocused: {
-      borderColor: theme.colors.primary, // Border on focus
-      backgroundColor: theme.colors.surface, // White background on focus
+      borderColor: theme.colors.primary, 
+      backgroundColor: theme.colors.surface, 
   },
   inputContainerError: {
       borderColor: theme.colors.error,
@@ -329,7 +329,7 @@ const loginStyles = (theme: any) => StyleSheet.create({
     justifyContent: 'center',
     width: '100%',
     minHeight: 50,
-    // No shadow needed based on reference
+    
   },
   buttonDisabled: {
     backgroundColor: theme.colors.textDisabled,
@@ -339,7 +339,7 @@ const loginStyles = (theme: any) => StyleSheet.create({
     ...theme.typography.button,
     color: theme.colors.onPrimary,
   },
-  // Links container removed
+  
 });
 
 export default LoginScreen;

@@ -1,30 +1,30 @@
 import { TextStyle, ViewStyle } from 'react-native';
 
 const colors = {
-  primary: '#90CAF9',          // Light blue for primary elements
-  primaryVariant: '#64B5F6',    // Slightly darker light blue
-  secondary: '#CE93D8',        // Light purple for secondary elements
-  secondaryVariant: '#BA68C8',  // Slightly darker light purple
-  background: '#121212',        // Dark background
-  surface: '#1E1E1E',          // Darker surface for cards, etc.
-  error: '#EF9A9A',            // Light red for errors
-  success: '#A5D6A7',          // Light green for success
-  warning: '#FFD54F',          // Light yellow for warnings
+  primary: '#90CAF9',         
+  primaryVariant: '#64B5F6',   
+  secondary: '#CE93D8',        
+  secondaryVariant: '#BA68C8',  
+  background: '#121212',        
+  surface: '#1E1E1E',          
+  error: '#EF9A9A',            
+  success: '#A5D6A7',          
+  warning: '#FFD54F',          
 
-  onPrimary: '#000000',        // Text on primary (black)
-  onSecondary: '#000000',        // Text on secondary (black)
-  onBackground: '#FFFFFF',      // Text on background (white)
-  onSurface: '#FFFFFF',        // Text on surfaces (white)
-  onError: '#000000',          // Text on error (black)
-  onSuccess: '#000000',        // Text on success (black)
-  onWarning: '#000000',        // Text on warning (black)
+  onPrimary: '#000000',        
+  onSecondary: '#000000',        
+  onBackground: '#FFFFFF',      
+  onSurface: '#FFFFFF',        
+  onError: '#000000',         
+  onSuccess: '#000000',        
+  onWarning: '#000000',        
 
-  textPrimary: '#FFFFFF',      // Primary text color (white)
-  textSecondary: '#B0B0B0',      // Secondary text color (light gray)
-  textDisabled: '#757575',      // Disabled text color (gray)
-  border: '#424242',            // Border color (dark gray)
-  divider: '#303030',          // Divider color (even darker gray)
-  ripple: 'rgba(144, 202, 249, 0.1)', // Ripple effect based on primary
+  textPrimary: '#FFFFFF',      
+  textSecondary: '#B0B0B0',      
+  textDisabled: '#757575',      
+  border: '#424242',            
+  divider: '#303030',          
+  ripple: 'rgba(144, 202, 249, 0.1)', 
 
   white: '#FFFFFF',
   black: '#000000',
@@ -144,7 +144,7 @@ const animation = {
     slow: 500,
   },
   easing: {
-    standard: (x: number) => x, // linear (pode substituir por bezier ou Easing APIs)
+    standard: (x: number) => x, 
   },
 };
 

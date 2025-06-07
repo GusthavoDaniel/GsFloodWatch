@@ -9,7 +9,7 @@ const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const theme = isDarkMode ? darkTheme : lightTheme;
 
-  // Carregar a preferência de tema ao iniciar o app
+  
   useEffect(() => {
     const loadThemePreference = async () => {
       try {
@@ -25,7 +25,7 @@ const App: React.FC = () => {
     loadThemePreference();
   }, []);
 
-  // Salvar a preferência de tema quando mudar
+  
   const handleThemeChange = async (value: boolean) => {
     setIsDarkMode(value);
     try {

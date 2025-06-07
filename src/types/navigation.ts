@@ -1,4 +1,4 @@
-// Navegação de pilha (Stack)
+
 export type RootStackParamList = {
   Login: undefined;
   MainTabs: undefined;
@@ -10,7 +10,7 @@ export type RootStackParamList = {
   EditAlert: { alertId: string };
 };
 
-// Navegação por abas (Bottom Tabs)
+
 export type RootTabParamList = {
   AlertListTab: undefined;
   MapTab: undefined;

@@ -1,4 +1,3 @@
-// src/services/alertsService.ts
 import { Alert } from '../types/data';
 
 let mockAlerts: Alert[] = [

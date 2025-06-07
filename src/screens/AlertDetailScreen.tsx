@@ -15,6 +15,7 @@ import { Feather } from '@expo/vector-icons';
 import { RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import * as Haptics from 'expo-haptics';
+import { deleteAlert } from '../services/alertsService';
 
 import { getAlerts } from '../services/alertsService'; // agora real com API
 import { Alert as AlertType } from '../types/data';
