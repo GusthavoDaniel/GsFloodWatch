@@ -2,6 +2,7 @@
 Aplicativo móvel para monitoramento e alerta de inundações, desenvolvido como parte da Global Solution do projeto de Mobile Application Development utilizando React Native.
 
 👥 Integrantes do Grupo
+
 Gusthavo Daniel de Souza -RM:554681
 
 Lucas Miranda Leite -RM:555161 
