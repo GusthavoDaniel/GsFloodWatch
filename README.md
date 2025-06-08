@@ -86,14 +86,4 @@ Expo Image Picker, Expo Linear Gradient
 
 react-native-safe-area-context, Vector Icons
 
-👥 Integrantes do Grupo
-[Nome 1]
 
-[Nome 2]
-
-[Nome 3]
-
-[Nome 4]
-
-📹 Demonstração em Vídeo
-🔗 Link para o vídeo no YouTube
