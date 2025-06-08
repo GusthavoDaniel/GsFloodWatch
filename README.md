@@ -5,15 +5,16 @@ Aplicativo móvel para monitoramento e alerta de inundações, desenvolvido como
 
 Gusthavo Daniel de Souza -RM:554681
 
-Lucas Miranda Leite -RM:555161 
+Lucas Miranda Leite -RM:555161
 
-Guilherme Damasio 
-Roselli  -RM:555873 
+Guilherme Damasio Roselli -RM:555873
 
-📹 Demonstração em Vídeo
-[🔗 Link para o vídeo no YouTube](https://youtube.com/shorts/PAnphZb35bg)
+📹 Demonstração em Vídeo 🔗 https://youtube.com/shorts/PAnphZb35bg
+
+## Funcionalidades Implementadas
 
 ✅ Funcionalidades Implementadas
+
 🔧 CRUD Completo de Alertas
 Create: Cadastro de novos alertas pela tela Adicionar Alerta
 
